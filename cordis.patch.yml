@@ -1,0 +1,4 @@
+# dsh-memory-ark：宿主半边（定时备份 + 设置页），没有客户端半边
+- insert:
+    - id: memory-ark
+      name: dsh-memory-ark

@@ -1,0 +1,40 @@
+{
+  "name": "dsh-memory-ark",
+  "version": "0.4.2",
+  "description": "记忆方舟：每天定时把一个指定工作区里的指定会话备份进 memvault 记忆库",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "client.js",
+    "page.js",
+    "cordis.patch.yml",
+    "memory-vault",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "backup",
+    "memory-ark"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": ["slots"],
+      "external": ["react"]
+    }
+  }
+}
